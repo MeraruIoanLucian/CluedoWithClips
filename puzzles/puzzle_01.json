@@ -1,0 +1,32 @@
+{
+  "title": "Misterul din Vila Rozelor",
+  "description": "Un om a fost gasit mort in Vila Rozelor. Trei suspecti, trei arme, trei locatii. Cine este criminalul?",
+  "suspects": ["Ana", "Bogdan", "Carmen"],
+  "weapons": ["cutit", "otrava", "pistol"],
+  "locations": ["salon", "bucatarie", "gradina"],
+  "clues": [
+    {"type": "not_suspect_location", "suspect": "Ana", "location": "salon"},
+    {"type": "not_suspect_location", "suspect": "Carmen", "location": "salon"},
+    {"type": "not_weapon_location", "weapon": "cutit", "location": "salon"},
+    {"type": "not_weapon_location", "weapon": "pistol", "location": "salon"},
+    {"type": "not_suspect_weapon", "suspect": "Ana", "weapon": "otrava"},
+    {"type": "not_suspect_weapon", "suspect": "Carmen", "weapon": "otrava"},
+    {"type": "not_suspect_weapon", "suspect": "Ana", "weapon": "cutit"},
+    {"type": "not_suspect_location", "suspect": "Ana", "location": "gradina"},
+    {"type": "not_suspect_location", "suspect": "Carmen", "location": "gradina"},
+    {"type": "not_weapon_location", "weapon": "pistol", "location": "gradina"},
+    {"type": "not_weapon_location", "weapon": "cutit", "location": "gradina"},
+    {"type": "not_suspect_weapon", "suspect": "Carmen", "weapon": "cutit"},
+    {"type": "not_suspect_weapon", "suspect": "Bogdan", "weapon": "pistol"},
+    {"type": "not_suspect_weapon", "suspect": "Bogdan", "weapon": "cutit"},
+    {"type": "not_suspect_location", "suspect": "Bogdan", "location": "bucatarie"},
+    {"type": "not_suspect_location", "suspect": "Bogdan", "location": "gradina"},
+    {"type": "not_suspect_weapon", "suspect": "Ana", "weapon": "pistol"},
+    {"type": "not_suspect_weapon", "suspect": "Carmen", "weapon": "pistol"}
+  ],
+  "solution": {
+    "suspect": "Bogdan",
+    "weapon": "otrava",
+    "location": "salon"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "title": "Noaptea Balului Mascat",
+  "description": "In timpul unui bal mascat, un invitat a fost gasit fara viata. Cine se ascunde in spatele mastii?",
+  "suspects": [
+    "Marchizul",
+    "Contesa",
+    "Baronul",
+    "Ducesa"
+  ],
+  "weapons": [
+    "pumnal",
+    "otrava",
+    "candelabru",
+    "sabie"
+  ],
+  "locations": [
+    "sala_de_bal",
+    "terasa",
+    "pivnita",
+    "capela"
+  ],
+  "clues": [
+    {
+      "type": "suspect_location",
+      "suspect": "Baronul",
+      "location": "pivnita"
+    },
+    {
+      "type": "weapon_location",
+      "weapon": "candelabru",
+      "location": "pivnita"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Marchizul",
+      "location": "pivnita"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Contesa",
+      "location": "pivnita"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Ducesa",
+      "location": "pivnita"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Marchizul",
+      "location": "sala_de_bal"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Marchizul",
+      "location": "terasa"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Marchizul",
+      "location": "capela"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Contesa",
+      "location": "sala_de_bal"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Contesa",
+      "location": "terasa"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Contesa",
+      "location": "capela"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Ducesa",
+      "location": "sala_de_bal"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Ducesa",
+      "location": "terasa"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Ducesa",
+      "location": "capela"
+    },
+    {
+      "type": "not_suspect_weapon",
+      "suspect": "Baronul",
+      "weapon": "pumnal"
+    },
+    {
+      "type": "not_suspect_weapon",
+      "suspect": "Baronul",
+      "weapon": "otrava"
+    },
+    {
+      "type": "not_suspect_weapon",
+      "suspect": "Baronul",
+      "weapon": "sabie"
+    }
+  ],
+  "solution": {
+    "suspect": "Baronul",
+    "weapon": "candelabru",
+    "location": "pivnita"
+  }
+}

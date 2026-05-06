@@ -1,0 +1,162 @@
+{
+  "title": "Misterul Trenului Orient Express",
+  "description": "Pe trenul Orient Express, un pasager a fost gasit mort in compartimentul sau. Cinci suspecti, cinci posibilitati.",
+  "suspects": [
+    "Doctorul",
+    "Ambasadorul",
+    "Cantareata",
+    "Generalul",
+    "Contabila"
+  ],
+  "weapons": [
+    "bisturiu",
+    "otrava",
+    "revolver",
+    "fular",
+    "stilet"
+  ],
+  "locations": [
+    "compartiment",
+    "vagon_restaurant",
+    "locomotiva",
+    "bar",
+    "culoar"
+  ],
+  "clues": [
+    {
+      "type": "suspect_location",
+      "suspect": "Doctorul",
+      "location": "compartiment"
+    },
+    {
+      "type": "weapon_location",
+      "weapon": "bisturiu",
+      "location": "compartiment"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Ambasadorul",
+      "location": "compartiment"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Cantareata",
+      "location": "compartiment"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Generalul",
+      "location": "compartiment"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Contabila",
+      "location": "compartiment"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Ambasadorul",
+      "location": "vagon_restaurant"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Ambasadorul",
+      "location": "locomotiva"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Ambasadorul",
+      "location": "bar"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Ambasadorul",
+      "location": "culoar"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Cantareata",
+      "location": "vagon_restaurant"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Cantareata",
+      "location": "locomotiva"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Cantareata",
+      "location": "bar"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Cantareata",
+      "location": "culoar"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Generalul",
+      "location": "vagon_restaurant"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Generalul",
+      "location": "locomotiva"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Generalul",
+      "location": "bar"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Generalul",
+      "location": "culoar"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Contabila",
+      "location": "vagon_restaurant"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Contabila",
+      "location": "locomotiva"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Contabila",
+      "location": "bar"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Contabila",
+      "location": "culoar"
+    },
+    {
+      "type": "not_suspect_weapon",
+      "suspect": "Doctorul",
+      "weapon": "otrava"
+    },
+    {
+      "type": "not_suspect_weapon",
+      "suspect": "Doctorul",
+      "weapon": "revolver"
+    },
+    {
+      "type": "not_suspect_weapon",
+      "suspect": "Doctorul",
+      "weapon": "fular"
+    },
+    {
+      "type": "not_suspect_weapon",
+      "suspect": "Doctorul",
+      "weapon": "stilet"
+    }
+  ],
+  "solution": {
+    "suspect": "Doctorul",
+    "weapon": "bisturiu",
+    "location": "compartiment"
+  }
+}

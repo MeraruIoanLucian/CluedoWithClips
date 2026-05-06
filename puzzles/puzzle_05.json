@@ -1,0 +1,114 @@
+{
+  "title": "Crima din Castelul Bran",
+  "description": "O noapte furtunoasa la Castelul Bran. Un vizitator a fost gasit fara suflare. Legendele spun ca nu fantomele sunt de vina...",
+  "suspects": [
+    "Ghidul",
+    "Castelana",
+    "Gardianul",
+    "Turistul"
+  ],
+  "weapons": [
+    "topor",
+    "otrava",
+    "arbaleta",
+    "lumanare"
+  ],
+  "locations": [
+    "turnul",
+    "cripta",
+    "sala_tronului",
+    "curtea"
+  ],
+  "clues": [
+    {
+      "type": "suspect_location",
+      "suspect": "Castelana",
+      "location": "cripta"
+    },
+    {
+      "type": "weapon_location",
+      "weapon": "otrava",
+      "location": "cripta"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Ghidul",
+      "location": "cripta"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Gardianul",
+      "location": "cripta"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Turistul",
+      "location": "cripta"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Ghidul",
+      "location": "turnul"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Ghidul",
+      "location": "sala_tronului"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Ghidul",
+      "location": "curtea"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Gardianul",
+      "location": "turnul"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Gardianul",
+      "location": "sala_tronului"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Gardianul",
+      "location": "curtea"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Turistul",
+      "location": "turnul"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Turistul",
+      "location": "sala_tronului"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Turistul",
+      "location": "curtea"
+    },
+    {
+      "type": "not_suspect_weapon",
+      "suspect": "Castelana",
+      "weapon": "topor"
+    },
+    {
+      "type": "not_suspect_weapon",
+      "suspect": "Castelana",
+      "weapon": "arbaleta"
+    },
+    {
+      "type": "not_suspect_weapon",
+      "suspect": "Castelana",
+      "weapon": "lumanare"
+    }
+  ],
+  "solution": {
+    "suspect": "Castelana",
+    "weapon": "otrava",
+    "location": "cripta"
+  }
+}

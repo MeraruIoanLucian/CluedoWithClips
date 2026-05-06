@@ -1,0 +1,114 @@
+{
+  "title": "Crima de la Conacul Vechi",
+  "description": "Un mister se ascunde in Conacul Vechi. Patru suspecti, patru arme, patru locatii. Descopera adevarul!",
+  "suspects": [
+    "Colonel Ionescu",
+    "Doamna Popa",
+    "Profesorul Radu",
+    "Domnisoara Alina"
+  ],
+  "weapons": [
+    "cutit",
+    "otrava",
+    "pistol",
+    "franghie"
+  ],
+  "locations": [
+    "biblioteca",
+    "bucatarie",
+    "gradina",
+    "dormitor"
+  ],
+  "clues": [
+    {
+      "type": "suspect_location",
+      "suspect": "Doamna Popa",
+      "location": "bucatarie"
+    },
+    {
+      "type": "weapon_location",
+      "weapon": "otrava",
+      "location": "bucatarie"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Colonel Ionescu",
+      "location": "bucatarie"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Profesorul Radu",
+      "location": "bucatarie"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Domnisoara Alina",
+      "location": "bucatarie"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Colonel Ionescu",
+      "location": "biblioteca"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Colonel Ionescu",
+      "location": "gradina"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Colonel Ionescu",
+      "location": "dormitor"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Profesorul Radu",
+      "location": "biblioteca"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Profesorul Radu",
+      "location": "gradina"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Profesorul Radu",
+      "location": "dormitor"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Domnisoara Alina",
+      "location": "biblioteca"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Domnisoara Alina",
+      "location": "gradina"
+    },
+    {
+      "type": "not_suspect_location",
+      "suspect": "Domnisoara Alina",
+      "location": "dormitor"
+    },
+    {
+      "type": "not_suspect_weapon",
+      "suspect": "Doamna Popa",
+      "weapon": "cutit"
+    },
+    {
+      "type": "not_suspect_weapon",
+      "suspect": "Doamna Popa",
+      "weapon": "pistol"
+    },
+    {
+      "type": "not_suspect_weapon",
+      "suspect": "Doamna Popa",
+      "weapon": "franghie"
+    }
+  ],
+  "solution": {
+    "suspect": "Doamna Popa",
+    "weapon": "otrava",
+    "location": "bucatarie"
+  }
+}
