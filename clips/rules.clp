@@ -1,13 +1,6 @@
-;;;======================================================
 ;;; Murder Mystery Puzzle Solver - Reguli CLIPS
-;;; Sistem expert bazat pe eliminare pentru rezolvarea
-;;; puzzle-urilor de tip murder mystery.
-;;;
-;;; Combinatiile posibile sunt generate de Python si
-;;; incarcate ca fapte. CLIPS le elimina pe baza indiciilor.
-;;;======================================================
 
-;;; ===== TEMPLATE-URI =====
+;;; Templateuri
 
 (deftemplate suspect
    (slot name (type STRING)))
@@ -18,22 +11,22 @@
 (deftemplate location
    (slot name (type STRING)))
 
-;;; O combinatie posibila (suspect, arma, locatie)
+;;; combinatie (suspect, arma, locatie)
 (deftemplate possible
    (slot suspect (type STRING))
    (slot weapon (type STRING))
    (slot location (type STRING)))
 
-;;; Solutia gasita
+;;; solutia gasita
 (deftemplate solution
    (slot suspect (type STRING))
    (slot weapon (type STRING))
    (slot location (type STRING)))
 
-;;; Indicator ca nu s-a gasit solutie
+;;; daca nu avem solutie
 (deftemplate no-solution)
 
-;;; ===== INDICII (CLUES) =====
+;;; Indicii
 
 (deftemplate clue-not-suspect-weapon
    (slot suspect (type STRING))
@@ -56,10 +49,9 @@
    (slot location (type STRING)))
 
 
-;;; ===== REGULI DE ELIMINARE =====
+;;; Eliminare
 
 ;;; Suspectul X NU a folosit arma Y
-;;; Elimina toate combinatiile cu suspectul X si arma Y
 (defrule eliminate-not-suspect-weapon
    (declare (salience 50))
    (clue-not-suspect-weapon (suspect ?s) (weapon ?w))
@@ -84,7 +76,6 @@
    (retract ?p))
 
 ;;; Suspectul X ERA in locatia Y
-;;; Elimina toate combinatiile unde suspectul X e in alta locatie
 (defrule apply-suspect-in-location
    (declare (salience 50))
    (clue-suspect-location (suspect ?s) (location ?l))
@@ -93,7 +84,6 @@
    (retract ?p))
 
 ;;; Arma Y ERA in locatia Z
-;;; Elimina toate combinatiile unde arma Y e in alta locatie
 (defrule apply-weapon-in-location
    (declare (salience 50))
    (clue-weapon-location (weapon ?w) (location ?l))
@@ -102,9 +92,9 @@
    (retract ?p))
 
 
-;;; ===== DETECTARE SOLUTIE =====
+;;; Detectarea solutiei
 
-;;; Daca a ramas o singura combinatie posibila
+;;; a ramas o singura varianta
 (defrule found-solution
    (declare (salience 10))
    (possible (suspect ?s) (weapon ?w) (location ?l))
@@ -119,7 +109,7 @@
    (printout t "Arma: " ?w crlf)
    (printout t "Locatia: " ?l crlf))
 
-;;; Daca nu mai exista combinatii posibile
+;;; nu mai avem variante posibile
 (defrule no-solution-found
    (declare (salience 5))
    (not (possible))

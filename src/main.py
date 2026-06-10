@@ -1,14 +1,11 @@
-"""
-main.py - Interfata CLI pentru Murder Mystery Puzzle Solver.
-Meniu interactiv care permite utilizatorului sa listeze, selecteze,
-vizualizeze si rezolve puzzle-uri murder mystery.
-"""
+# main.py
+# Meniu interactiv pentru puzzle-uri
 import os
 import sys
 import json
 import glob
 
-# adaugam directorul parinte in path pentru importuri
+# path pentru import
 sys.path.insert(0, os.path.dirname(__file__))
 
 from parser import load_and_validate, validate_puzzle
@@ -20,41 +17,33 @@ PUZZLES_DIR = os.path.join(os.path.dirname(__file__), "..", "puzzles")
 
 
 def clear_screen():
-    """Sterge ecranul terminalului."""
+    # curatam ecranul
     os.system("cls" if os.name == "nt" else "clear")
 
 
 def print_header():
-    """Afiseaza header-ul aplicatiei."""
-    print()
-    print("=" * 52)
-    print("  MURDER MYSTERY PUZZLE SOLVER")
-    print("  Sistem Expert bazat pe CLIPS")
-    print("=" * 52)
-    print()
+    print("\n--- MURDER MYSTERY PUZZLE SOLVER ---")
+    print("Sistem Expert bazat pe CLIPS\n")
 
 
 def print_menu():
-    """Afiseaza meniul principal."""
-    print("  1. Listeaza puzzle-urile disponibile")
-    print("  2. Selecteaza un puzzle")
-    print("  3. Vizualizeaza datele puzzle-ului")
-    print("  4. Vizualizeaza Baza de Cunostinte (KB)")
-    print("  5. Rezolva puzzle-ul")
-    print("  6. Adauga un puzzle nou")
-    print("  0. Iesire")
-    print()
+    print("1. Listeaza puzzle-urile")
+    print("2. Selecteaza un puzzle")
+    print("3. Vizualizeaza date")
+    print("4. Vizualizeaza KB")
+    print("5. Rezolva")
+    print("6. Adauga puzzle")
+    print("0. Iesire\n")
 
 
 def get_puzzle_files():
-    """Returneaza lista fisierelor JSON din directorul puzzles/."""
+    # ia fisierele json
     pattern = os.path.join(os.path.abspath(PUZZLES_DIR), "*.json")
     files = sorted(glob.glob(pattern))
     return files
 
 
 def list_puzzles():
-    """Afiseaza puzzle-urile disponibile."""
     files = get_puzzle_files()
     if not files:
         print("  [!] Nu exista puzzle-uri in directorul 'puzzles/'.")
@@ -76,7 +65,6 @@ def list_puzzles():
 
 
 def select_puzzle(current_puzzle):
-    """Selecteaza un puzzle din lista disponibila."""
     files = get_puzzle_files()
     if not files:
         print("  [!] Nu exista puzzle-uri disponibile.")
@@ -109,7 +97,6 @@ def select_puzzle(current_puzzle):
 
 
 def view_puzzle_data(puzzle):
-    """Afiseaza datele brute ale puzzle-ului selectat."""
     if puzzle is None:
         print("  [!] Selecteaza mai intai un puzzle (optiunea 2).")
         return
@@ -140,7 +127,6 @@ def view_puzzle_data(puzzle):
 
 
 def format_clue(clue):
-    """Formateaza un indiciu intr-un text lizibil."""
     t = clue["type"]
     if t == "not_suspect_weapon":
         return f"{clue['suspect']} NU a folosit {clue['weapon']}"
@@ -156,7 +142,6 @@ def format_clue(clue):
 
 
 def view_kb(puzzle):
-    """Afiseaza baza de cunostinte CLIPS generata."""
     if puzzle is None:
         print("  [!] Selecteaza mai intai un puzzle (optiunea 2).")
         return
@@ -168,7 +153,6 @@ def view_kb(puzzle):
 
 
 def solve_puzzle(puzzle):
-    """Rezolva puzzle-ul selectat si afiseaza solutia."""
     if puzzle is None:
         print("  [!] Selecteaza mai intai un puzzle (optiunea 2).")
         return
@@ -213,8 +197,7 @@ def solve_puzzle(puzzle):
 
 
 def add_puzzle():
-    """Permite utilizatorului sa adauge un puzzle nou."""
-    print("\n  === ADAUGARE PUZZLE NOU ===\n")
+    print("\n--- ADAUGARE PUZZLE ---\n")
 
     title = input("  Titlul puzzle-ului: ").strip()
     if not title:
@@ -332,7 +315,6 @@ def add_puzzle():
 
 
 def main():
-    """Functia principala - bucla meniului CLI."""
     current_puzzle = None
 
     clear_screen()

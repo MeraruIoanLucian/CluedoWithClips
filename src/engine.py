@@ -1,7 +1,4 @@
-"""
-engine.py - Modul de executie CLIPS.
-Incarca regulile, insereaza faptele si ruleaza motorul de inferenta.
-"""
+# engine.py
 import os
 import clips
 
@@ -11,10 +8,6 @@ RULES_FILE = os.path.join(os.path.dirname(__file__), "..", "clips", "rules.clp")
 
 
 def solve(puzzle, facts_list):
-    """
-    Rezolva un puzzle murder mystery folosind motorul CLIPS.
-    Returneaza dict cu solutia sau None.
-    """
     env = clips.Environment()
 
     rules_path = os.path.abspath(RULES_FILE)
@@ -42,9 +35,6 @@ def solve(puzzle, facts_list):
 
 
 def get_remaining_possibilities(puzzle, facts_list):
-    """
-    Returneaza combinatiile posibile ramase dupa rularea CLIPS.
-    """
     env = clips.Environment()
     rules_path = os.path.abspath(RULES_FILE)
     env.load(rules_path)

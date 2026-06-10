@@ -1,14 +1,8 @@
-"""
-converter.py - Modul de conversie puzzle JSON -> fapte CLIPS.
-Transforma datele puzzle-ului in assertions compatibile cu motorul CLIPS.
-"""
+
+#Transforma datele puzzle-ului in assertions compatibile cu motorul CLIPS.
 
 
 def puzzle_to_clips_facts(puzzle):
-    """
-    Converteste un puzzle (dict) intr-o lista de stringuri cu fapte CLIPS.
-    Fiecare string e o comanda (assert ...) gata de executat.
-    """
     facts = []
 
     # adaugam suspectii
@@ -67,10 +61,6 @@ def puzzle_to_clips_facts(puzzle):
 
 
 def format_kb_display(puzzle):
-    """
-    Formateaza baza de cunostinte intr-un mod lizibil pentru afisare in CLI.
-    Arata faptele CLIPS care vor fi incarcate.
-    """
     facts = puzzle_to_clips_facts(puzzle)
     lines = []
     lines.append("=" * 50)

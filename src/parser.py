@@ -1,12 +1,9 @@
-"""
-parser.py - Modul de citire si validare a puzzle-urilor murder mystery.
-Citeste fisiere JSON si verifica ca au structura corecta.
-"""
+
 import json
 import os
 
 
-# campurile obligatorii dintr-un puzzle
+# campurile obligatorii
 REQUIRED_FIELDS = ["title", "description", "suspects", "weapons", "locations", "clues"]
 
 # tipurile de indicii acceptate si campurile pe care le necesita
@@ -20,10 +17,7 @@ CLUE_TYPES = {
 
 
 def load_puzzle(filepath):
-    """
-    Citeste un fisier JSON si returneaza dictionarul puzzle-ului.
-    Arunca exceptie daca fisierul nu exista sau nu e JSON valid.
-    """
+    # citeste un json
     if not os.path.exists(filepath):
         raise FileNotFoundError(f"Fisierul '{filepath}' nu exista.")
 
@@ -37,11 +31,6 @@ def load_puzzle(filepath):
 
 
 def validate_puzzle(puzzle):
-    """
-    Verifica ca un puzzle are toate campurile necesare si ca indiciile
-    refera suspecti/arme/locatii existente.
-    Returneaza (True, None) daca e valid, sau (False, mesaj_eroare) daca nu.
-    """
     # verificam campurile obligatorii
     for field in REQUIRED_FIELDS:
         if field not in puzzle:
@@ -91,8 +80,8 @@ def validate_puzzle(puzzle):
 
 def load_and_validate(filepath):
     """
-    Incarca si valideaza un puzzle dintr-un fisier.
-    Returneaza puzzle-ul daca e valid, sau arunca exceptie daca nu.
+    Incarca si valideaza un puzzle dintr-un fisier
+    Returneaza puzzle-ul daca e valid sau arunca exceptie daca nu
     """
     puzzle = load_puzzle(filepath)
     valid, error = validate_puzzle(puzzle)
